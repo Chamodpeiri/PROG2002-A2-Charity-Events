@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const db = require('./event_db');
@@ -7,9 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Charity Events API is running');
-});
+app.use(express.static(path.join(__dirname, '../client-side')));
 
 app.get('/api/events', (req, res) => {
     const sql = `
