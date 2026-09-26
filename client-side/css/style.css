@@ -210,6 +210,15 @@ a {
     border-radius: 10px;
 }
 
+.event-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
 /* --------------------------------------------------
    Responsive layout for smaller screens
 -------------------------------------------------- */

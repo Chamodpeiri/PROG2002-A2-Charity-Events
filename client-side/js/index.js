@@ -20,16 +20,33 @@ fetch('http://localhost:3000/api/events')
 
             // Add the event information to the page
             eventCard.innerHTML = `
-                <h3>${event.event_name}</h3>
-                <p><strong>Category:</strong> ${event.category_name}</p>
-                <p><strong>Location:</strong> ${event.location}</p>
-                <p><strong>Date:</strong> ${new Date(event.event_date).toLocaleDateString()}</p>
+    <img
+        src="images/${event.image}"
+        alt="${event.event_name}"
+        class="event-image"
+    >
 
-                <!-- Pass the event ID to the details page using a query string -->
-                <a href="event.html?id=${event.event_id}">View Details</a>
+    <h3>${event.event_name}</h3>
 
-                <hr>
-            `;
+    <p>
+        <strong>Category:</strong>
+        ${event.category_name}
+    </p>
+
+    <p>
+        <strong>Location:</strong>
+        ${event.location}
+    </p>
+
+    <p>
+        <strong>Date:</strong>
+        ${new Date(event.event_date).toLocaleDateString()}
+    </p>
+
+    <a href="event.html?id=${event.event_id}">
+        View Details
+    </a>
+`;
 
             // Add the completed event card to the page
             container.appendChild(eventCard);
