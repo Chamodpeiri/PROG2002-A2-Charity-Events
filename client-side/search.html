@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Search Events</title>
+
+    <!-- Connects the external CSS stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+    <!-- Website header and navigation -->
     <header>
         <div>
             <h1>Helping Hands Charity</h1>
-            <p class="header-subtitle">Supporting communities through meaningful events</p>
+            <p class="header-subtitle">
+                Supporting communities through meaningful events
+            </p>
         </div>
 
         <nav>
@@ -22,20 +31,27 @@
 
     <main>
 
+        <!-- Introduction for the Search Events page -->
         <section class="page-intro">
             <h2>Search Charity Events</h2>
             <p>Find upcoming charity events by date, location, or category.</p>
         </section>
 
+        <!--
+            Search form.
+            Users can search using one or multiple criteria.
+        -->
         <section class="search-section">
 
             <form id="search-form">
 
+                <!-- Search by event date -->
                 <div class="form-group">
                     <label for="date">Date</label>
                     <input type="date" id="date">
                 </div>
 
+                <!-- Search by event location -->
                 <div class="form-group">
                     <label for="location">Location</label>
                     <input
@@ -44,16 +60,26 @@
                         placeholder="Enter location">
                 </div>
 
+                <!--
+                    Search by event category.
+                    Category options are loaded dynamically from the API.
+                -->
                 <div class="form-group">
                     <label for="category">Category</label>
+
                     <select id="category">
                         <option value="">All Categories</option>
                     </select>
                 </div>
 
+                <!-- Search and reset controls -->
                 <div class="button-group">
                     <button type="submit">Search Events</button>
-                    <button type="button" id="clear-filters" class="secondary-button">
+
+                    <button
+                        type="button"
+                        id="clear-filters"
+                        class="secondary-button">
                         Clear Filters
                     </button>
                 </div>
@@ -62,14 +88,17 @@
 
         </section>
 
+        <!-- Displays validation or search messages -->
         <p id="message"></p>
 
+        <!-- Search results returned from the API are displayed here -->
         <section class="results-section">
             <div id="search-results"></div>
         </section>
 
     </main>
 
+    <!-- JavaScript used for categories, filtering and DOM updates -->
     <script src="js/search.js"></script>
 
 </body>

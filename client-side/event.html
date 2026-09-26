@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Event Details</title>
+
+    <!-- Connects the external CSS stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+    <!-- Website header and navigation menu -->
     <header>
         <h1>Helping Hands Charity</h1>
 
@@ -18,11 +25,20 @@
     </header>
 
     <main>
+
+        <!--
+            Dynamic event details section.
+            The selected event information is loaded from the API
+            using the event ID passed in the URL query string.
+        -->
         <div id="event-details">
             <p>Loading event details...</p>
         </div>
+
     </main>
 
+    <!-- Loads the JavaScript used to retrieve and display one event -->
     <script src="js/event.js"></script>
+
 </body>
 </html>

@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Charity Events</title>
+
+    <!-- Connects the external CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+    <!-- Website header and navigation menu -->
     <header>
         <h1>Helping Hands Charity</h1>
 
@@ -18,11 +25,41 @@
     </header>
 
     <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>Together we can make a difference in our community.</p>
-        </section>
 
+        <!-- Static information about the charity organisation -->
+        <section class="organisation-info">
+    <h2>Welcome to Helping Hands Charity</h2>
+
+    <p>
+        Helping Hands Charity supports local communities by organising
+        meaningful fundraising events and connecting people with causes
+        that make a difference.
+    </p>
+
+    <p>
+        <strong>Our Mission:</strong>
+        To bring communities together, raise awareness, and support
+        people in need through charity events.
+    </p>
+
+    <p>
+        <strong>Email:</strong> info@helpinghands.org
+    </p>
+
+    <p>
+        <strong>Phone:</strong> +94 11 234 5678
+    </p>
+
+    <p>
+        <strong>Location:</strong> Colombo, Sri Lanka
+    </p>
+</section>
+
+        <!--
+            Dynamic event section.
+            Event data is loaded from the API using JavaScript
+            and inserted into this container.
+        -->
         <section>
             <h2>Upcoming Charity Events</h2>
 
@@ -30,8 +67,11 @@
                 <p>Loading events...</p>
             </div>
         </section>
+
     </main>
 
+    <!-- Loads the JavaScript used to retrieve and display event data -->
     <script src="js/index.js"></script>
+
 </body>
 </html>
